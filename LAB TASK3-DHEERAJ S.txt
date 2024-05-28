@@ -1,0 +1,149 @@
+1. Python program to check leap year 
+
+def is_leap_year(year):                                                       #declaration of function
+    if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):              #if condition to check leap year or not 
+        return True                                                           #condition is true returns as True
+    else:                                                                     #else block
+        return False                                                          #condition is false returns as False
+
+
+year = int(input("Enter a year: "))                                           #input given to variable named year
+if is_leap_year(year):                                                        #if condition to check leap year or not                               
+    print(year, "is a leap year.")                                            #if condition is true print the output as specified
+else:                                                                         #else block
+    print(year, "is not a leap year.")                                        #if condition is false print the output as specified
+
+Output:
+
+Enter a year: 2023
+2023 is not a leap year.
+
+Enter a year: 2024
+2024 is a leap year.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2.Python Program to Find the Largest Among Three Numbers 
+
+def find_largest(num1, num2, num3):                                                  #declaration of function
+    if num1 >= num2 and num1 >= num3:                                                #if condition to check which number is larger among three numbers
+        return num1                                                                  #condition is true returns as num1
+    elif num2 >= num1 and num2 >= num3:                                              #else if block
+        return num2                                                                  #condition is true returns as num2
+    else:                                                                            #else block
+        return num3                                                                  #condition is false returns as False
+
+
+num1 = float(input("Enter the first number: "))                                      #input given to number1
+num2 = float(input("Enter the second number: "))                                     #input given to number2
+num3 = float(input("Enter the third number: "))                                      #input given to number3
+
+largest = find_largest(num1, num2, num3)                                             #calling function by assigning it to a variable called largest
+print("The largest number among", num1, ",", num2, ", and", num3, "is", largest)     #printing by comparing which number is largest
+
+Output:
+
+Enter the first number: 10
+Enter the second number: 20
+Enter the third number: 100
+The largest number among 10.0 , 20.0 , and 100.0 is 100.0
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3. Python Program to Check if a Number is Positive, Negative or 0 
+
+def check_number(num):                                                               #declaring a function
+    if num > 0:                                                                      #if condition as number greater than zero
+        return "Positive"                                                            #if condition is true it will return as Positive
+    elif num < 0:                                                                    #elseif condition as number less than zero
+        return "Negative"                                                            #elseif condition is true it will return as Negative 
+    else:                                                                            #else block
+        return "Zero"                                                                #if not satisfied the above two conditions returns as Zero
+
+
+num = float(input("Enter a number: "))                                               #input given to number
+result = check_number(num)                                                           #calling function by assigning it to a variable called result
+print("The number is", result)                                                       #print the result by verifing it as positive or negative or zero
+
+Output:
+
+Enter a number: 0
+The number is Zero
+
+Enter a number: 2
+The number is Positive
+
+Enter a number: -66
+The number is Negative
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+4. A toy vendor supplies three types of toys: Battery Based Toys, Key-based Toys, and Electrical Charging Based Toys. The vendor gives a discount of 10% on orders for battery-based toys if the order is for more than Rs. 1000. On orders of more than Rs. 100 for key-based toys, a discount of 5% is given, and a discount of 10% is given on orders for electrical charging based toys of value more than Rs. 500. Assume that the numeric codes 1,2 and 3 are used for battery based toys, key-based toys, and electrical charging based toys respectively. Write a program that reads the product code and the order amount and prints out the net amount that the customer is required to pay after the discount. 
+
+def calculate_discount(product_code, order_amount):                                                                          #declaration of the function
+    discount = 0                                                                                                             #assigning discount to zero
+    if product_code == 1 and order_amount > 1000:                                                                            #if condition satisfying both the conditions 
+        discount = 0.1 * order_amount                                                                                        #if this condion is true calculate by formula as mentioned
+    elif product_code == 2 and order_amount > 100:                                                                           #else if condition satisfying both the conditions
+        discount = 0.05 * order_amount                                                                                       #else if this condion is true calculate by formula as mentioned
+    elif product_code == 3 and order_amount > 500:                                                                           #else if condition satisfying both the conditions
+	discount = 0.1 * order_amount                                                                                        #else if this condion is true calculate by formula as mentioned 
+    return discount                                                                                                          #else return the discount value
+
+def calculate_net_amount(product_code, order_amount):                                                                        #decalaration of the function
+    discount = calculate_discount(product_code, order_amount)                                                                #calling the function by assigning it to discount
+    net_amount = order_amount - discount                                                                                     #calculation of net amount
+    return net_amount                                                                                                        #return the net amount value
+
+
+product_code = int(input("Enter the product code (1 for Battery Based Toys, 2 for Key-based Toys, 3 for Electrical Charging Based Toys): "))    #input given to product code 
+order_amount = float(input("Enter the order amount in Rs.: "))                                                                                  #input given to order amount
+
+net_amount = calculate_net_amount(product_code, order_amount)                                                                                   #calling the net amount by passing the  
+                                                                                                                                                 arguments 
+print("Net amount after discount: Rs.", net_amount)                                                                                             #print the net amount
+
+
+Output:
+
+Enter the product code (1 for Battery Based Toys, 2 for Key-based Toys, 3 for Electrical Charging Based Toys): 1
+Enter the order amount in Rs.: 500
+Net amount after discount: Rs. 500.0
+
+Enter the product code (1 for Battery Based Toys, 2 for Key-based Toys, 3 for Electrical Charging Based Toys): 2
+Enter the order amount in Rs.: 1000
+Net amount after discount: Rs. 950.0
+
+Enter the product code (1 for Battery Based Toys, 2 for Key-based Toys, 3 for Electrical Charging Based Toys): 3
+Enter the order amount in Rs.: 1500
+Net amount after discount: Rs. 1350.0
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+5. A transport company charges the fare according to following table: Distance Charges 1-50 8 Rs./Km 51-100 10 Rs./Km > 100 12 Rs/Km
+
+def calculate_fare(distance):                                                                                 #decalaring a function
+    if distance <= 50:                                                                                        #if statement 
+        fare = distance * 8                                                                                   #if statement is true then calculate the fare as mentioned
+    elif distance <= 100:                                                                                     #elseif statement
+        fare = 50 * 8 + (distance - 50) * 10                                                                  #elseif statement is true then calculate the fare as mentioned
+
+    else:                                                                                                     #else statement
+        fare = 50 * 8 + 50 * 10 + (distance - 100) * 12                                                       #else statement is true then calculate the fare as mentioned
+
+	return fare                                                                                           # return fare value
+
+
+distance = float(input("Enter the distance traveled (in km): "))                                              #given input to distance
+fare = calculate_fare(distance)                                                                               #calling the function by assigning it to fare
+print("The fare for traveling {} km is Rs. {}".format(distance, fare))                                        #print the fare for travelling
+
+
+Output:
+
+Enter the distance traveled (in km): 50
+The fare for traveling 50.0 km is Rs. 400.0
+
+Enter the distance traveled (in km): 100
+The fare for traveling 100.0 km is Rs. 900.0
+
+
