@@ -1,0 +1,78 @@
+
+1)Program to calculate the multiplication and sum of two numbers using python
+
+# Input two numbers
+num1 = float(input("Enter the first number: "))    #input for 1st number
+num2 = float(input("Enter the second number: "))   #input for 2nd number
+
+# Calculate multiplication and sum
+
+
+# Display the results
+print(num1*num2)                                  #result that is multiplication of two numbers
+print(num1+num2)                                  #result of summation of two numbers
+
+output:
+Enter the first number: 1
+Enter the second number: 2
+2.0
+3.0
+--------------------------------------------------------------------------------------------------------------------------------------
+
+2)Declare two variables and print that which variable is largest using ternary
+  operators
+
+# Declare two variables
+num1 = input("Enter the first number")                #input for 1st number
+
+num2 = input("Enter the second number: ")             #input for 2nd number
+
+
+# Determining the largest number using ternary operator
+largest = num1 if num1 > num2 else num2               #ternary operator
+
+# Display the result
+print(largest)                                        # printing of largest variable
+
+output:
+Enter the first number22
+Enter the second number: 7
+7
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3)Python Program to convert temperature in celsius to fahrenheit
+
+# change this value for a different result
+celsius = 37.5                                                                                 #decalaration of celsius value
+
+
+fahrenheit = (celsius * 1.8) + 32                                                              #formula which converts celsius to farenhit
+print('%0.1f degree Celsius is equal to %0.1f degree Fahrenheit' %(celsius,fahrenheit))        #printing the output of celsius to farenhit
+
+output:
+37.5 degree Celsius is equal to 99.5 degree Fahrenheit
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4) python program to find the area of a triangle whose sides are given
+
+#Input side lengths
+a=1                                                 #side1 of triange
+b=2                                                 #side2 of triange
+c=3                                                 #side3 of triange
+
+
+s = (a + b + c)/ 2                                  # Calculate semi-perimeter
+area =(s * (s - a) * (s - b) * (s - c))             # Calculate area
+print(area)                                         # printing the area of triangle
+
+output:
+The area of the triange with a,b,c sides are:4.6837484
+
+
+
+
+
+
+
+
+

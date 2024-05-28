@@ -1,0 +1,45 @@
+1)using input function take two numbers and then swap the number
+
+num1 = int(input("Enter first number: "))        #input for 1st number     
+num2 = int(input("Enter second number: "))       #input for 2nd number
+
+# Displaying numbers before swapping
+print("Before swapping:")                        #print statement for before swapping
+print("First number:", num1)                     #display the 1st number before swap  
+print("Second number:", num2)                    #display the 2nd number before swap
+
+# Swapping the numbers
+temp = num1                                      #assigning number to some variable called temp
+num1 = num2                                      #storing num2 value in num1
+num2 = temp                                      #storing temp value in num2
+
+# Displaying numbers after swapping
+print("After swapping:")                         #print statement for after swapping
+print("First number:",num1)                      #display the 1st number after swap
+print("Second number:",num2)                     #display the 2nd number before swap
+
+
+output:
+Enter first number: 1
+Enter second number: 2
+
+Before swapping:
+First number: 1
+Second number: 2
+
+After swapping:
+First number: 2
+Second number: 1
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2)using input function take one number from the user and using ternary operators check whether the number is even or odd
+
+num=int(input("Enter a number: "))               #taking input for the number              
+result = "Even" if num % 2 == 0 else "Odd"       #Using ternary operator to check if the number is even or odd
+print("The number is", result)                   #printing the number to know it is even or odd
+
+output:
+Enter a number: 21
+The number is Odd
+
+Enter a number: 4
+The number is Even
