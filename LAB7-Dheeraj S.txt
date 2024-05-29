@@ -1,0 +1,129 @@
+1) Write a Python program to count the occurrences of each word in a given sentence 
+
+   string = “To change the overall look of your document. To change the look available in the gallery” 
+
+
+def count_word_occurrences(sentence):                                                                                   # declaration of function
+    sentence = sentence.lower()                                                                                         # Convert the sentence to lowercase to ensure case-insensitivity
+    words = sentence.split()                                                                                            # Split the sentence into words
+    word_counts = {}                                                                                                    # Initialize an empty dictionary to store word counts
+
+    for word in words:                                                                                                  # Iterate through each word
+        word = word.strip(".,!?")                                                                                       # Remove punctuation from the word
+        word_counts[word] = word_counts.get(word, 0) + 1                                                                # Increment the count for this word in the dictionary
+    return word_counts
+
+
+string = "To change the overall look of your document. To change the look available in the gallery"                     # Given sentence in the question 
+word_occurrences = count_word_occurrences(string)                                                                       # Count the occurrences of each word
+
+
+for word, count in word_occurrences.items(): 
+    print(f"'{word}': {count}")                                                                                         # Print the results
+
+Output:
+
+'to': 2
+'change': 2
+'the': 3
+'overall': 1
+'look': 2
+'of': 1
+'your': 1
+'document': 1
+'available': 1
+'in': 1
+'gallery': 1
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2) Write a Python program to remove a newline in Python 
+
+   String = "\nBest \nDeeptech \nPython \nTraining\n" 
+
+def remove_newlines(input_string):                                                       # declaration of function 
+    cleaned_string = input_string.replace("\n", "")                                      # Replace newline characters with an empty string
+    return cleaned_string
+
+input_string = "\nBest \nDeeptech \nPython \nTraining\n"                                 # Given string in the question
+cleaned_string = remove_newlines(input_string)                                           # Remove newlines
+
+print("Original string:")                                            |
+print(input_string)                                                  |--------------->   # Print the cleaned string
+print("\nString after removing newlines:")                           |
+print(cleaned_string)                                                |
+
+Output:
+
+Original string:
+
+Best 
+Deeptech 
+Python 
+Training
+
+
+String after removing newlines:
+Best Deeptech Python Training
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3) Write a Python program to reverse words in a string 
+
+   String = “Deeptech Python Training” 
+
+def reverse_words(sentence):                                               # declaration of function
+   words = sentence.split()                                                # Split the sentence into words
+   reversed_words = words[::-1]                                            # Reverse the order of words
+   reversed_sentence = ' '.join(reversed_words)                            # Join the reversed words to form the reversed sentence
+   return reversed_sentence
+
+string = "Deeptech Python Training"                                        # Given string in the question 
+reversed_string = reverse_words(string)                                    # Reverse the words
+
+print("Original string:")                                |
+print(string)                                            |
+print("\nReversed string:")                              |--------->       # Print the reversed string
+print(reversed_string)                                   |
+
+
+Output:
+
+Original string:
+Deeptech Python Training
+
+Reversed string:
+Training Python Deeptech   
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4) Write a Python program to count and display the vowels of a given text String="Welcome to python Training"
+
+def count_and_display_vowels(text):                                                                             # declaration of function 
+   vowels = ['a', 'e', 'i', 'o', 'u']                                                                           # Define a list of vowels
+   vowel_counts = {vowel: 0 for vowel in vowels}                                                                # Initialize a dictionary to store vowel counts
+   text = text.lower()                                                                                          # Convert the text to lowercase to ensure case-insensitivity
+   
+   for char in text:                                                                                            # Iterate through each character in the text
+      if char in vowels:                                                                                        # Check if the character is a vowel
+         vowel_counts[char] += 1                                                                                # Increment the count for this vowel
+   for vowel, count in vowel_counts.items():
+        print(f"{vowel}: {count}")                                                                              # Display the vowel counts
+
+text_string = "Welcome to python Training"                                                                      # Given text string in the question 
+count_and_display_vowels(text_string)                                                                           # Count and display the vowels
+
+
+Output:
+
+a: 1
+e: 2
+i: 2
+o: 3
+u: 0
+
+
+                       
+
+
+

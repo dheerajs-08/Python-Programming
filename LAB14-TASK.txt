@@ -1,0 +1,90 @@
+1)  Write a Python program to Get Only unique items from two sets. 
+
+    Input: 
+
+    set1 = {10, 20, 30, 40, 50} 
+
+    set2 = {30, 40, 50, 60, 70}
+
+
+set1 = {10, 20, 30, 40, 50}                                                               |
+set2 = {30, 40, 50, 60, 70}                                                               |----------> # Define the two input sets
+unique_items = set1 | set2                                                                # Use the set union operator '|' to combine the two sets and store the result in a new set
+print(unique_items)                                                                       # Print the combined set which contains only unique items
+
+
+Output:
+
+{70, 40, 10, 50, 20, 60, 30}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2) Write a Python program to Return a set of elements present in Set A or B, but not both.
+
+   Input: 
+
+   set1 = {10, 20, 30, 40, 50} 
+
+   set2 = {30, 40, 50, 60, 70}
+
+
+set1 = {10, 20, 30, 40, 50}                                                                |--------> # Define the two input sets
+set2 = {30, 40, 50, 60, 70}                                                                |
+result = set1 ^ set2                                                                       # Use the symmetric difference operator '^' to get elements present in Set A or B, but not both
+print(result)                                                                              # print the resulting number    
+
+Output:
+ 
+{20, 70, 10, 60}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3)  Write a Python program to Check if two sets have any elements in common. If yes, display the common elements. 
+
+    Input: 
+
+    set1 = {10, 20, 30, 40, 50} 
+
+    set2 = {60, 70, 80, 90, 10} 
+
+
+set1 = {10, 20, 30, 40, 50}                                                                     |
+set2 = {60, 70, 80, 90, 10}                                                                     |---------># Define the two input sets
+common_elements = set1.intersection(set2)                                                       # Check if there are any common elements between the two sets using the intersection method
+if common_elements:                                                                             # Check if there are common elements
+    print("Common elements:", common_elements)                                                  # If common elements exist, print them
+else:                                                                                           # else block
+    print("No common elements found.")                                                          # If no common elements exist, print a message
+
+Output:
+
+Common elements: {10}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4) Write a Python program to Remove items from set1 that are not common to both set1 and set2.
+
+   Input: 
+
+   set1 = {10, 20, 30, 40, 50} 
+
+   set2 = {30, 40, 50, 60, 70} 
+
+
+
+set1 = {10, 20, 30, 40, 50}                                                                       |------> # Define the two input sets
+set2 = {30, 40, 50, 60, 70}                                                                       |
+common_elements = set1 & set2                                                                              # Use the intersection operator '&' to find common elements between set1 and set2
+set1.intersection_update(set2)                                                                             # Remove items from set1 that are not common to both set1 and set2
+print("Updated set1:", set1)                                                                               # Print the updated set1
+
+
+Output:
+
+Updated set1: {40, 50, 30}
+
+
+
+
+
+

@@ -1,0 +1,96 @@
+1) Write a Python program to find the number of times 4 appears in the tuple. 
+
+   Input: tuplex = (2, 4, 5, 6, 2, 3, 4, 4, 7 ) 
+
+tuplex = (2, 4, 5, 6, 2, 3, 4, 4, 7)                                                                   # Define the input tuple
+count_4 = tuplex.count(4)                                                                              # Count the occurrences of 4 in the tuple using the count() method
+print("Number of times 4 appears in the tuple:", count_4)                                              # Print the count of occurrences of 4
+
+
+Output:
+
+Number of times 4 appears in the tuple: 3
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2) Write a Python program to convert a list to a tuple. 
+
+   Input: listx = [5, 10, 7, 4, 15, 3] 
+
+
+
+listx = [5, 10, 7, 4, 15, 3]                                                                             # Define the input list
+tuplex = tuple(listx)                                                                                    # Convert the list to a tuple using the tuple() constructor
+print("Original list:", listx)                                                                           # To print the original list 
+print("Converted tuple:", tuplex)                                                                        # To print the converted tuple
+
+Output:
+
+Original list: [5, 10, 7, 4, 15, 3]
+Converted tuple: (5, 10, 7, 4, 15, 3)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3) Write a Python program to calculate the sum of the numbers in a given tuple. 
+
+   Input: tuples_list = [(1, 2), (3, 4), (5, 6)]
+
+
+tuples_list = [(1, 2), (3, 4), (5, 6)]                                                                       # Define the input list of tuples
+total_sum = 0                                                                                                # Initialize a variable to store the sum
+for tup in tuples_list:                                                                                      # Iterate over each tuple in the list
+    for num in tup:                                                                                          # Iterate over each element in the tuple
+        total_sum += num                                                                                     # Add the number to the total sum
+print("Sum of the numbers in the given tuple:", total_sum)                                                   # Print the total sum
+
+
+Output:
+
+Sum of the numbers in the given tuple: 21
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4) Write a python program and iterate the given tuples
+
+   Input: 
+
+   employee1 = ("John Doe", 101, "Human Resources", 60000) 
+
+   employee2 = ("Alice Smith", 102, "Marketing", 55000) 
+
+   employee3 = ("Bob Johnson", 103, "Engineering", 75000)
+
+
+
+employee1 = ("John Doe", 101, "Human Resources", 60000)                                      |
+employee2 = ("Alice Smith", 102, "Marketing", 55000)                                         |------------> # Define the input tuples
+employee3 = ("Bob Johnson", 103, "Engineering", 75000)                                       |
+employees = [employee1, employee2, employee3]                                                               # Create a list containing all employee tuples
+for employee in employees:                                                                                  # Iterate over each employee tuple in the list
+    name, emp_id, department, salary = employee                                                             # Unpack the tuple elements into individual variables
+    print("Name:", name)                                                                      |
+    print("Employee ID:", emp_id)                                                             |
+    print("Department:", department)                                                          |--------->   # Print information about each employee
+    print("Salary:", salary)                                                                  |
+    print()                                                                                                 # Add a newline for better readability
+
+
+Output:
+
+Name: John Doe
+Employee ID: 101
+Department: Human Resources
+Salary: 60000
+
+Name: Alice Smith
+Employee ID: 102
+Department: Marketing
+Salary: 55000
+
+Name: Bob Johnson
+Employee ID: 103
+Department: Engineering
+Salary: 75000
+
+
+

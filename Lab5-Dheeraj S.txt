@@ -1,0 +1,103 @@
+1) Write a python program to reverse a number using a while loop 
+
+
+def reverse_number(number):                                        # declaration of function to reverse a number
+    reversed_number = 0                                            # Initialize variable to store the reversed number
+    while number > 0:                                              # Continue loop until number becomes 0
+        digit = number % 10                                        # Extract the last digit of the number
+        reversed_number = reversed_number * 10 + digit             # Append the digit to the reversed number
+        number = number // 10                                      # Remove the last digit from the number
+    return reversed_number                                         # Return the reversed number
+number = int(input("Enter a number: "))                            # Input number from the user
+reversed_number = reverse_number(number)                           # Call the function to reverse the number
+print("Reversed number:", reversed_number)                         # Display the reversed number
+
+Output:
+
+Enter a number: 12345
+Reversed number: 54321
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2) Write a python program to check whether a number is palindrome or not? 
+
+
+def is_palindrome(number):                                               #declaration of function to check if a number is palindrome
+    original_number = number                                             # Store the original number for comparison later
+    reversed_number = 0                                                  # Initialize variable to store the reversed number
+    while number > 0:                                                    # Continue loop until number becomes 0
+        digit = number % 10                                              # Extract the last digit of the number
+        reversed_number = reversed_number * 10 + digit                   # Append the digit to the reversed number
+        number = number // 10                                            # Remove the last digit from the number
+ 
+    if original_number == reversed_number:                               # Check if the original number is equal to its reversed version
+        return True                                                      # If true, the number is a palindrome
+    else:                                                                #else block
+        return False                                                     # If false, the number is not a palindrome
+
+
+number = int(input("Enter a number: "))                                  # Input number from the user
+
+if is_palindrome(number):                                                # Call the function to check if the number is a palindrome
+    print(number, "is a palindrome.")                                    #displaying the result as palindrome if the number is palindrome
+else:                                                                    #else block
+    print(number, "is not a palindrome.")                                #displaying the result as not a palindrome if the number is not a palindrome number
+
+
+Output:
+
+Enter a number: 121
+121 is a palindrome.
+
+Enter a number: 661
+661 is not a palindrome.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3) Write a python program finding the factorial of a given number using a while loop
+
+
+def factorial(n):                                                          #  declaration of function to find the factorial of a given number
+    result = 1                                                             # Initialize the result variable to store the factorial
+    while n > 0:                                                           # Continue loop until n becomes 0
+        result *= n                                                        # Multiply result by n
+        n -= 1                                                             # Decrement n by 1 for the next iteration
+    return result                                                          # Return the factorial of the given number
+number = int(input("Enter a number: "))                                    # Input number from the user
+fact = factorial(number)                                                   # Call the function to find the factorial
+print("Factorial of", number, "is", fact)                                  # Display the factorial of the given number
+
+Output:
+
+Enter a number: 5
+Factorial of 5 is 120
+
+Enter a number: 8
+Factorial of 8 is 40320
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4) Accept numbers using input() function until the user enters 0. If user input 0 then break the while loop and display the sum of all the numbers.
+
+
+total_sum = 0                                                             # Initialize sum variable to store the sum of numbers
+while True:                                                               # while block Accept numbers from the user until 0 is entered
+     num = int(input("Enter a number (0 to stop): "))                     # Input a number from the user
+     if num == 0:                                                         # Check if the entered number is 0
+        break                                                             # Exit the loop if 0 is entered
+     total_sum += num                                                     # Add the entered number to the total sum
+print("Sum of all the numbers:", total_sum)                               # Display the sum of all the entered numbers
+
+Output:
+
+Enter a number (0 to stop): 45
+Enter a number (0 to stop): 33
+Enter a number (0 to stop): 22
+Enter a number (0 to stop): 1
+Enter a number (0 to stop): 0
+Sum of all the numbers: 101
+
+
+
+
+
+

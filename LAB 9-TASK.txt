@@ -1,0 +1,101 @@
+1) Write a function in python to read the content from a text file "ABC.txt" line by line and display the same on screen. 
+
+def read_file_with_comments(filename):            # declaration of function
+    try:                                          # try block
+        with open(filename, 'r') as file:         # Open the file in read mode
+            for line in file:                     # Read each line from the file
+                print(line.strip())               # Display the line
+                print("#", line.strip())          # Add a comment with the content of the line
+    except FileNotFoundError:
+        print("File not found:", filename)
+    except Exception as e:
+        print("An error occurred:", e)
+
+read_file_with_comments("ABC.txt")               # Usage
+  
+Output:
+
+File not found: ABC.txt
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2) Write a function in Python to count and display the total number of words in a text file “ABC.txt” 
+
+def count_words_with_comments(filename):
+    try:
+        
+        with open(filename, 'r') as file:                                 # Open the file in read mode
+            total_words = 0
+            for line in file:                                             # Read each line from the file
+                 print(line.strip())                                      # Display the line
+                print("#", line.strip())                                  # Add a comment with the content of the line
+                words = line.split()                                      # Split the line into words
+                num_words = len(words)                                    # Count the number of words in the line
+                total_words += num_words                                  # Add the number of words in the line to the total count
+            print("Total words in the file:", total_words)                # Display the total number of words
+    except FileNotFoundError:
+        print("File not found:", filename)
+    except Exception as e:
+        print("An error occurred:", e)
+
+
+count_words_with_comments("ABC.txt")                                      # Usage
+
+Output:
+
+File not found: ABC.txt
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3) Write a function in Python to count uppercase character in a text file “ABC.txt” 
+
+def count_uppercase_with_comments(filename):                                                           # declaration of function 
+    try:
+        with open(filename, 'r') as file:                                                              # Open the file in read mode
+            total_uppercase = 0
+            for line in file:                                                                          # Read each line from the file
+                print(line.strip())                                                                    # Display the line
+                print("#", line.strip())                                                               # Add a comment with the content of the line
+                uppercase_count = sum(1 for char in line if char.isupper())                            # Count the number of uppercase characters in the line
+                total_uppercase += uppercase_count                                                     # Add the count of uppercase characters in the line to the total count
+            print("Total uppercase characters in the file:", total_uppercase)                          # Display the total number of uppercase characters
+    except FileNotFoundError:
+        print("File not found:", filename)
+    except Exception as e:
+        print("An error occurred:", e)
+
+
+count_uppercase_with_comments("ABC.txt")                                                               # Usage
+
+Output:
+
+File not found: ABC.txt
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4) Write a function display_words() in python to read lines from a text file "story.txt", and display those words, which are less than 4 characters.
+
+def display_words(filename):                                                                          # declaration of technology
+    try:
+        with open(filename, 'r') as file:                                                             # Open the file in read mode
+            for line in file:                                                                         # Read each line from the file
+                print(line.strip())                                                                   # Display the line
+                print("#", line.strip())                                                              # Add a comment with the content of the line
+                words = line.split()                                                                  # Split the line into words
+                short_words = [word for word in words if len(word) < 4]                               # Filter words that are less than 4 characters
+                if short_words:                                                                       # Display the short words
+                    print("Short words (< 4 characters):", ", ".join(short_words))
+    except FileNotFoundError:
+        print("File not found:", filename)
+    except Exception as e:
+        print("An error occurred:", e)
+
+
+display_words("story.txt")                                                                            # Usage
+
+
+Output:
+
+File not found: ABC.txt
+
+

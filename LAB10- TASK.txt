@@ -1,0 +1,98 @@
+1) Write a Python program to handle a ZeroDivisionError exception when dividing a number by zero. 
+
+def display_file_with_comments(file_path):                                                             # Declaration of function
+    try:                                                                                               # try block
+        with open(file_path, 'r') as file:                                                             # read operation
+            for line_num, line in enumerate(file, start=1):                                            # Read the file line by line
+                print(f"Line {line_num}: {line.strip()}")                                              # Display the line number and the line content
+    except FileNotFoundError:                                                                          # except block
+        print(f"Error: File '{file_path}' not found.")
+
+
+file_path = "ABC.txt"                                                     |------------------------>   # Example usage
+display_file_with_comments(file_path)                                     |
+
+
+Output:
+
+Error: Division by zero is not allowed.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2) Write a Python program that prompts the user to input an integer and raises a ValueError exception if the input is not a valid integer. 
+
+
+def get_integer_input():                                                                                                    # declaration of function 
+    while True:                                                                                                             # Keep asking until valid input is provided
+        try:                                                                                                                # try block
+            user_input = input("Please enter an integer: ")                                                                 # Prompt user for input
+            integer_value = int(user_input)                                                                                 # Convert input to an integer
+            return integer_value                                                                                            # Return the integer if successful
+        except ValueError:                                                                                                  # Handle the ValueError exception for invalid input
+            print("Error: Please enter a valid integer.")
+
+try:                                                               
+    user_integer = get_integer_input()                                                                                      # Get integer input from the user
+    print("You entered:", user_integer)                                                                                     # Display the integer entered by the user
+except ValueError:                                                                                                          # Handle any ValueError raised by get_integer_input function
+    print("An error occurred while processing your input.")
+
+Output:
+
+Please enter an integer: "abc"
+Error: Please enter a valid integer.
+Please enter an integer: 10
+You entered: 10
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3) Write a Python program that opens a file and handles a FileNotFoundError exception if the file does not exist. 
+
+
+def read_file(file_path):                                                                                               # declaration of function 
+    try:                                                                                                                # try block
+        with open(file_path, 'r') as file:                                                                              # Open the file for reading
+            content = file.read()                                                                                       # Read the content of the file
+            print("File content:")
+            print(content)                                                                                              # Print the content of the file
+    except FileNotFoundError:                                                                                           # Handle the FileNotFoundError exception
+        print(f"Error: File '{file_path}' not found.")
+
+file_path = "example.txt"                                                                                               # Replace "example.txt" with the actual file path
+read_file(file_path)
+
+Output:
+
+Error: File 'example.txt' not found.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4) Write a Python program that prompts the user to input two numbers and raises a TypeError exception if the inputs are not numerical
+
+def get_numerical_inputs():
+    while True:                                                                                                      # Keep asking until valid input is provided
+        try:
+            num1 = float(input("Enter the first number: "))                                                          # Prompt user for the first number
+            num2 = float(input("Enter the second number: "))                                                         # Prompt user for the second number
+            return num1, num2                                                                                        # Return the numbers if conversion is successful
+        except ValueError:                                                                                           # Handle the ValueError exception for invalid input
+            print("Error: Please enter numerical values.")
+
+try:
+    number1, number2 = get_numerical_inputs()                                                                        # Get numerical inputs from the user
+    print("First number:", number1)                                                                                  # Display the first number entered by the user
+    print("Second number:", number2)                                                                                 # Display the second number entered by the user
+except TypeError:                                                                                                    # Handle any TypeError raised by get_numerical_inputs function
+    print("An error occurred while processing your input.")
+
+Output:
+
+Enter the first number: 1
+Enter the second number: 2
+First number: 1.0
+Second number: 2.0
+
+Enter the first number: 1 
+Enter the second number: e
+Error: Please enter numerical values.
+

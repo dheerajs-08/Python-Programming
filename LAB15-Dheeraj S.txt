@@ -1,0 +1,57 @@
+
+
+  1)  Convert the below list into numpy array then display the array
+
+      Input: my_list = [1, 2, 3, 4, 5]
+
+
+
+      import numpy as np                                                                              # Importing NumPy library and aliasing it as np
+
+      my_list = [1, 2, 3, 4, 5]                                                                       # Creating a list named my_list
+
+      my_array = np.array(my_list)                                                                    # Converting the list to a NumPy array
+    
+      print("NumPy array:", my_array)                                                                 # Displaying the NumPy array
+
+
+      Output:
+
+      NumPy array: [1 2 3 4 5]
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+  2)   Convert the below list into a numpy array then display the array then display the first and last index and then multiply each element by 2 and display the result.
+
+       Input: my_list = [1, 2, 3, 4, 5]
+
+
+       import numpy as np                                                                              # Importing NumPy library and aliasing it as np
+
+       my_list = [1, 2, 3, 4, 5]                                                                       # Creating a list named my_list
+
+       my_array = np.array(my_list)                                                                    # Converting the list to a NumPy array
+
+       print("NumPy array:", my_array)                                                                 # Displaying the NumPy array
+
+       print("Index of the first element:", 0)                                                         # Displaying the index of the first element
+
+       print("Index of the last element:", len(my_array) - 1)                                          # Displaying the index of the last element
+
+       result_array = my_array * 2                                                                     # Multiplying each element by 2
+
+       print("Result after multiplying each element by 2:", result_array)                              # Displaying the result
+
+
+       
+       Output:
+
+       NumPy array: [1 2 3 4 5]
+       Index of the first element: 0
+       Index of the last element: 4
+       Result after multiplying each element by 2: [ 2  4  6  8  10]
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+

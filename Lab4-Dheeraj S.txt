@@ -1,0 +1,73 @@
+1) Declare a div() function with two parameters. Then call the function and pass two numbers and display their division. 
+
+def div(num1, num2):                                                                # Define the div() function with two parameters
+
+
+    if num2 != 0:                                                                   # Check if the second number is not zero 
+        return num1 / num2                                                          # divide the two numbers
+    else:                                                                           #else block
+        return "Division by zero is not allowed."                                   #if the second number is zero this statement will be returned
+
+
+num1 = 10                                                                           #num1 assigned with 10
+num2 = 2                                                                            #num2 assigned with 2
+result = div(num1, num2)                                                            #calling the div function by passing the arguments
+
+
+print("Division result:", result)                                                   #print statement to display the division result
+
+
+Output:
+
+Division result: 5.0
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2) Declare a square() function with one parameter. Then call the function and pass one number and display the square of that number .
+
+def square(num):                                                               # Declare a function named square() that takes one parameter called num
+    result = num * num                                                         # Calculate the square of the number and store it in the result variable
+    return result                                                              # Return the result
+number = 5                                                                     # Call the square() function and pass a number as 5
+square_result = square(number)                                                 # Call the square() function with the number and store the result
+print("The square of", number, "is", square_result)                            # Print the square of the number
+
+Output:
+
+Square of 5 is: 25
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3) Using max() and min() functions display the maximum and minimum of 5 random numbers.
+
+import random                                                                                    # Import the random module to generate random numbers
+random_numbers = [random.randint(1, 100) for _ in range(5)]                                      # Generate 5 random numbers between 1 and 100
+print("Generated random numbers:", random_numbers)                                               # Print the list of random numbers
+maximum = max(random_numbers)                                                                    # Find the maximum of the random numbers using the max() function
+print("Maximum of the random numbers:", maximum)                                                 # print the maximun random numbers
+minimum = min(random_numbers)                                                                    # Find the minimum of the random numbers using the min() function
+print("Minimum of the random numbers:", minimum)                                                 # print the minimum random numbers
+
+Output:
+
+Generated random numbers: [27, 30, 79, 9, 23]
+Maximum of the random numbers: 79
+Minimum of the random numbers: 9
+
+Generated random numbers: [31, 99, 9, 14, 48]
+Maximum of the random numbers: 99
+Minimum of the random numbers: 9
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4) Accept a name from the user and display that in lower case using lower() function
+
+name = input("Enter your name: ")                                                               # Accept a name from the user
+lowercase_name = name.lower()                                                                   # Convert the name to lowercase using the lower() function
+print("Name in lowercase:", lowercase_name)                                                     # Display the name in lowercase
+
+Output:
+
+Enter your name: DHEERAJ
+Name in lowercase: dheeraj
+
